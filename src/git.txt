@@ -1,0 +1,7 @@
+Some of the difficult scenarios without git
+
+1. Working in collaboration was difficult.
+2. Accidental deletion of the files.
+3. Sync history maintain.
+4. Reverting the code in case of emergency.
+5.
