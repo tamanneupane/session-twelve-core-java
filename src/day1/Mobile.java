@@ -6,7 +6,7 @@ public class Mobile {
 
     // OS
     // brand
-    // batterylife
+    // battery life
     // screen size
     // OS Version
     // memory size
@@ -15,7 +15,21 @@ public class Mobile {
     // price
     // screen resolution
     // Camera
+    // ratings
+    // no of shares
+    // no of likes
 
-    // Behaviour
+    // Behaviour (Informative)
 
+    // share
+    // provide rating
+    // like phone
+
+    // Behaviour (Ecommerce)
+
+    // add to cart
+    // increase quantity
+    // like phone
+    // share
+    // buy
 }
