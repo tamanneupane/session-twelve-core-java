@@ -7,29 +7,30 @@ public class BankAccount {
     // States
 
     // account Number
-    String accountNumber;
+    private String accountNumber;
     // routing number
-    String routingNumber;
+    private String routingNumber;
+    private String ssn;
     // balance
-    double balance;
+    private double balance;
 
     // Transactions
-    List<Transaction> transactions;
+    private List<Transaction> transactions;
 
     // account type
-    AccountType accountType;
+    private AccountType accountType;
 
     // account status
-    AccountStatus accountStatus;
+    private AccountStatus accountStatus;
 
     // is card blocked
-    boolean isCardBlocked;
+    private boolean isCardBlocked;
 
     //Address
-    Address address;
+    private Address address;
 
     // cards
-    List<Card> cards;
+    private List<Card> cards;
 
     // mobile number
     // user id
@@ -45,16 +46,67 @@ public class BankAccount {
 
 
     // bank name
-    final String BANK_NAME = "Sanima Bank";
+    private final String BANK_NAME = "Sanima Bank";
+
+    public String getAccountNumber(BankAccount account){
+        return account.accountNumber;
+    }
+
+    public void setAccountNumber(BankAccount account, String accountNumber){
+        // checking of the format
+        account.accountNumber = accountNumber;
+    }
+
+    public double getAccountBalance(BankAccount account){
+        return account.balance;
+    }
+
+    public void setAccountBalance(BankAccount account, double balance){
+        account.balance = balance;
+    }
+
+    public void setSSN(BankAccount account ,String ssn){
+        account.ssn = ssn;
+    }
 
     // Behaviour
 
-    // deposit
-    // withdraw
-    // transfer
-    // update kyc
-    // check balance
-    // card request
+    // deposit => Parameters, Arguments -> to which account, how much amount
+
+    public boolean deposit(BankAccount toWhichAccount, double amount){
+        return true;
+    }
+
+    // withdraw => parameters -> from which account and how much amount
+
+    public boolean withdraw(BankAccount fromWhichAccount, double amount){
+        return true;
+    }
+
+    // transfer => parameters -> from which account, to which account, how much amount
+
+    public boolean transfer(BankAccount toWhichAccount, BankAccount fromWhichAccount, double amount){
+        return true;
+    }
+
+    // update kyc => parameters => KYCHelper Class ko object
+
+    public void updateKYC(KYCHelper kycHelper){
+
+    }
+
+    // check balance => parameters -> account
+
+    public double checkBalance(BankAccount account){
+        return account.balance;
+    }
+
+    // card request => parameters -> account , what type of card
+
+    public void cardRequest(BankAccount account, String cardType){
+
+    }
+
     // change password
     // block card
 
