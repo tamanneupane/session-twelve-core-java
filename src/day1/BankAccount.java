@@ -74,6 +74,7 @@ public class BankAccount {
     // deposit => Parameters, Arguments -> to which account, how much amount
 
     public boolean deposit(BankAccount toWhichAccount, double amount){
+        toWhichAccount.balance = toWhichAccount.balance + amount;
         return true;
     }
 
