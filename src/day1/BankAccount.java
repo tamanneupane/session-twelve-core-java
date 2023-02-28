@@ -1,5 +1,6 @@
 package day1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BankAccount {
@@ -15,7 +16,7 @@ public class BankAccount {
     private double balance;
 
     // Transactions
-    private List<Transaction> transactions;
+    private List<Transaction> transactions = new ArrayList<>();
 
     // account type
     private AccountType accountType;
@@ -30,7 +31,7 @@ public class BankAccount {
     private Address address;
 
     // cards
-    private List<Card> cards;
+    private List<Card> cards = new ArrayList<>();
 
     // mobile number
     // user id
@@ -48,25 +49,95 @@ public class BankAccount {
     // bank name
     private final String BANK_NAME = "Sanima Bank";
 
-    public String getAccountNumber(BankAccount account){
-        return account.accountNumber;
+
+
+    public BankAccount(){}
+
+    public BankAccount(String accountNumber, String routingNumber, String ssn, AccountType accountType){}
+
+    public BankAccount(String accountNumber, String routingNumber, String ssn, AccountType accountType, Address address){
+        this.accountNumber = accountNumber;
+        this.routingNumber = routingNumber;
+        this.ssn = ssn;
+        this.accountType = accountType;
+        this.address = address;
     }
 
-    public void setAccountNumber(BankAccount account, String accountNumber){
-        // checking of the format
-        account.accountNumber = accountNumber;
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
-    public double getAccountBalance(BankAccount account){
-        return account.balance;
+    public void setRoutingNumber(String routingNumber) {
+        this.routingNumber = routingNumber;
     }
 
-    public void setAccountBalance(BankAccount account, double balance){
-        account.balance = balance;
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
     }
 
-    public void setSSN(BankAccount account ,String ssn){
-        account.ssn = ssn;
+    public void setTransactions(List<Transaction> transactions) {
+        this.transactions = transactions;
+    }
+
+    public void setAccountType(AccountType accountType) {
+        this.accountType = accountType;
+    }
+
+    public void setAccountStatus(AccountStatus accountStatus) {
+        this.accountStatus = accountStatus;
+    }
+
+    public void setCardBlocked(boolean cardBlocked) {
+        isCardBlocked = cardBlocked;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public void setCards(List<Card> cards) {
+        this.cards = cards;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getRoutingNumber() {
+        return routingNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public AccountType getAccountType() {
+        return accountType;
+    }
+
+    public AccountStatus getAccountStatus() {
+        return accountStatus;
+    }
+
+    public boolean isCardBlocked() {
+        return isCardBlocked;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public List<Card> getCards() {
+        return cards;
+    }
+
+    public String getBANK_NAME() {
+        return BANK_NAME;
     }
 
     // Behaviour
@@ -98,8 +169,8 @@ public class BankAccount {
 
     // check balance => parameters -> account
 
-    public double checkBalance(BankAccount account){
-        return account.balance;
+    public double checkBalance(){
+        return this.balance;
     }
 
     // card request => parameters -> account , what type of card
